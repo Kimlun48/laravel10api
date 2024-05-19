@@ -44,7 +44,7 @@ class PostController extends Controller
         //define validation rule
         $validator = Validator::make($request->all(), [
             'image'  => 'required|image|mimes:png,jpg,jpeg,gif,svg|max:2048',
-            'title'  => 'required',
+            'title'  => 'required|string',
             'content' => 'required',
         ]);
 
@@ -95,7 +95,7 @@ class PostController extends Controller
     {
         //define validation rules
         $validator = Validator::make($request->all(), [
-            'title' => 'required',
+            'title' => 'required|string',
             'content' => 'required'
         ]);
 
